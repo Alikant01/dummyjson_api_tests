@@ -119,7 +119,6 @@ source venv/bin/activate`
 
 `pytest tests/test_api.py -v`
 
-========================================= test session starts =========================================
 collected 10 items
 
 tests/test_api.py::test_01_successful_login PASSED
@@ -133,7 +132,6 @@ tests/test_api.py::test_08_update_cart PASSED
 tests/test_api.py::test_09_delete_cart PASSED
 tests/test_api.py::test_10_negative_get_nonexistent_cart PASSED
 
-========================================= 10 passed in 8.04s ==========================================
 
 
 ## Известные проблемы
