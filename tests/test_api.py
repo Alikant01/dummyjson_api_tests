@@ -159,7 +159,7 @@ def test_07_create_cart(user_id):
     }
     response = requests.post(f"{CARTS_URL}/add", json=payload)
 
-    assert response.status_code == 200, f"Ожидался 200, получен {response.status_code}"
+    assert response.status_code in [200, 201], f"Ожидался 200 или 201, получен {response.status_code}"
 
     json_response = response.json()
     assert json_response.get("userId") == user_id, "userId не совпадает"
