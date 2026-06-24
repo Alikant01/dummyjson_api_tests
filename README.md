@@ -30,7 +30,7 @@
 
 `pytest tests/test_api.py::test_01_successful_login -v`
 
-### Инструкция по установке и запуску
+## Инструкция по установке и запуску
 Требования
 Python 3.8 или выше
 Git
@@ -119,32 +119,31 @@ source venv/bin/activate`
 
 `pytest tests/test_api.py -v`
 
-================================================= test session starts =================================================
+= test session starts =
 platform win32 -- Python 3.13.7, pytest-8.0.0, pluggy-1.6.0
 rootdir: C:\Users\Руслан\dummyjson_api_tests
 collected 10 items
 
-tests/test_api.py::test_01_successful_login PASSED                                                               [ 10%]
-tests/test_api.py::test_02_unsuccessful_login PASSED                                                             [ 20%]
-tests/test_api.py::test_03_get_current_user_with_token PASSED                                                    [ 30%]
-tests/test_api.py::test_04_get_current_user_without_token PASSED                                                 [ 40%]
-tests/test_api.py::test_05_get_user_carts PASSED                                                                 [ 50%]
-tests/test_api.py::test_06_get_cart_by_id PASSED                                                                 [ 60%]
-tests/test_api.py::test_07_create_cart PASSED                                                                    [ 70%]
-tests/test_api.py::test_08_update_cart PASSED                                                                    [ 80%]
-tests/test_api.py::test_09_delete_cart PASSED                                                                    [ 90%]
-tests/test_api.py::test_10_negative_get_nonexistent_cart PASSED                                                  [100%]
+tests/test_api.py::test_01_successful_login PASSED[ 10%]
+tests/test_api.py::test_02_unsuccessful_login PASSED[ 20%]
+tests/test_api.py::test_03_get_current_user_with_token PASSED[ 30%]
+tests/test_api.py::test_04_get_current_user_without_token PASSED[ 40%]
+tests/test_api.py::test_05_get_user_carts PASSED[ 50%]
+tests/test_api.py::test_06_get_cart_by_id PASSED[ 60%]
+tests/test_api.py::test_07_create_cart PASSED[ 70%]
+tests/test_api.py::test_08_update_cart PASSED[ 80%]
+tests/test_api.py::test_09_delete_cart PASSED[ 90%]
+tests/test_api.py::test_10_negative_get_nonexistent_cart PASSED[100%]
 
-=============================================== 10 passed in 8.04s ===============================================
 
 ## Известные проблемы
 
-# Проблема 1: Статус-код при создании корзины
+### Проблема 1: Статус-код при создании корзины
 Описание: В документации DummyJSON указано, что POST /carts/add возвращает статус 200, но в реальности API возвращает статус 201 (Created). Это более корректное поведение, соответствующее HTTP-стандартам.
 Решение: Тест адаптирован для обоих статусов (200 и 201).
 Статус: Исправлено.
 
-# Проблема 2: Симуляция операций с корзиной
+### Проблема 2: Симуляция операций с корзиной
 Описание: API DummyJSON не сохраняет изменения на сервере при создании, обновлении и удалении корзины. Все операции являются симуляцией и возвращают моковые данные.
 Ожидаемое поведение: Для тестовых целей это приемлемо, так как API предназначен для prototyping.
 Статус: Принято как особенность API.
