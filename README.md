@@ -119,21 +119,21 @@ source venv/bin/activate`
 
 `pytest tests/test_api.py -v`
 
-= test session starts =
-platform win32 -- Python 3.13.7, pytest-8.0.0, pluggy-1.6.0
-rootdir: C:\Users\Руслан\dummyjson_api_tests
+========================================= test session starts =========================================
 collected 10 items
 
-tests/test_api.py::test_01_successful_login PASSED[ 10%]
-tests/test_api.py::test_02_unsuccessful_login PASSED[ 20%]
-tests/test_api.py::test_03_get_current_user_with_token PASSED[ 30%]
-tests/test_api.py::test_04_get_current_user_without_token PASSED[ 40%]
-tests/test_api.py::test_05_get_user_carts PASSED[ 50%]
-tests/test_api.py::test_06_get_cart_by_id PASSED[ 60%]
-tests/test_api.py::test_07_create_cart PASSED[ 70%]
-tests/test_api.py::test_08_update_cart PASSED[ 80%]
-tests/test_api.py::test_09_delete_cart PASSED[ 90%]
-tests/test_api.py::test_10_negative_get_nonexistent_cart PASSED[100%]
+tests/test_api.py::test_01_successful_login PASSED
+tests/test_api.py::test_02_unsuccessful_login PASSED
+tests/test_api.py::test_03_get_current_user_with_token PASSED
+tests/test_api.py::test_04_get_current_user_without_token PASSED
+tests/test_api.py::test_05_get_user_carts PASSED
+tests/test_api.py::test_06_get_cart_by_id PASSED
+tests/test_api.py::test_07_create_cart PASSED
+tests/test_api.py::test_08_update_cart PASSED
+tests/test_api.py::test_09_delete_cart PASSED
+tests/test_api.py::test_10_negative_get_nonexistent_cart PASSED
+
+========================================= 10 passed in 8.04s ==========================================
 
 
 ## Известные проблемы
